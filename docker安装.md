@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>docker安装</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
-
-<body class="stackedit">
-  <div class="stackedit__html"><h2 id="删除docker组件">删除docker组件</h2>
+<h2 id="删除docker组件">删除docker组件</h2>
 <p><strong>查看是否已经安装的Docker软件包</strong></p>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> yum list installed <span class="token operator">|</span> <span class="token function">grep</span> docker
 </code></pre>
@@ -255,7 +244,4 @@ fastbuildfunction<span class="token punctuation">(</span><span class="token punc
 <pre class=" language-bash"><code class="prism  language-bash">docker run -d -p 5000:5000  \
 --restart always --name registry registry:2
 </code></pre>
-</div>
-</body>
 
-</html>
