@@ -88,7 +88,7 @@ docker run -d -p 443:9000 --name portainer  \
 <span class="token function">sudo</span> <span class="token function">tee</span> /etc/docker/daemon.json <span class="token operator">&lt;&lt;</span>-<span class="token string">'EOF'</span> 
 <span class="token punctuation">{</span> 
   <span class="token string">"registry-mirrors"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token string">"https://wv49dcaq.mirror.aliyuncs.com"</span><span class="token punctuation">]</span>,
-  <span class="token string">"insecure-registry"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+  <span class="token string">"insecure-registries"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
     <span class="token string">"172.16.60.65:5000"</span>,
     <span class="token string">"172.16.65.166:5000"</span>,
     <span class="token string">"registry.cn-hangzhou.aliyuncs.com"</span>
@@ -244,5 +244,9 @@ fastbuildfunction<span class="token punctuation">(</span><span class="token punc
 
 <span class="token comment"># 一键制作镜像(含版本号处理)</span>
 ./autodocker.sh fv binname 
+</code></pre>
+<h3 id="创建registoy库">2.创建Registoy库</h3>
+<pre class=" language-bash"><code class="prism  language-bash">docker run -d -p 5000:5000  \
+--restart always --name registry registry:2
 </code></pre>
 
